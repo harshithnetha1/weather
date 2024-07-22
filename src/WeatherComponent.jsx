@@ -4,6 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import coverImage from './cover1.png';
+import coverImage1 from './cover.png';
+
 
 const WeatherComponent = () => {
   const [city, setCity] = useState('');
@@ -44,14 +47,17 @@ const WeatherComponent = () => {
   };
 
   return (
-    <div style={{backgroundImage: `url('https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?cs=srgb&dl=pexels-jplenio-1118873.jpg&fm=jpg')`,
+    <div 
+    style={{
+      backgroundImage: `url(${coverImage})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      height: '100vh', 
+      height: '100vh',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-    }}>
+    }}
+    >
        <Container>
       <Row>
         <Col>
@@ -64,7 +70,7 @@ const WeatherComponent = () => {
           padding: '10px', 
           fontSize: '16px', 
           fontFamily:'sans-serif',
-          borderRadius: '2px', 
+          borderRadius: '15px', 
           border: '1px solid #ccc',  
         }}
         onChange={handleInputChange}
